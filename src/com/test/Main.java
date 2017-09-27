@@ -25,8 +25,11 @@ public class Main {
                     begin = i;
                 }
                 count++;
-                end = i;
-                temp = count;
+                //end = i;
+                //temp = count;
+                if (i == str.length() - 1) {
+                    end = i;
+                }
             }else {
                 if (count > temp) {
                     temp = count;
@@ -40,6 +43,7 @@ public class Main {
         //System.out.println(begin+"    "+end);
         if (temp == 0) {
             System.out.println("");
+            System.out.println(0);
         }else {
             if (str.charAt(str.length()-1)>= '0' && str.charAt(str.length()-1) <= '9') {
                 System.out.println(str.substring(begin, end + 1));
